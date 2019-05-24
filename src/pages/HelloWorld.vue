@@ -94,7 +94,7 @@ export default {
       return '¥' + (this.goods.price / 100).toFixed(2);
     },
     onClickCart() {
-      this.$router.push('cart');
+      this.$router.push({name:'cart'});
       console.log(this.$router)
     },
     sorry() {

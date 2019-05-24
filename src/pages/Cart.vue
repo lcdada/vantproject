@@ -22,6 +22,7 @@
       :button-text="submitBarText"
       @submit="onSubmit"
     />
+     <div @click="onClickList">列表</div>
   </div>
 </template>
 
@@ -90,6 +91,9 @@ export default {
     },
     onSubmit() {
       Toast('点击结算');
+    },
+    onClickList(){
+      this.$router.push('list');
     }
   }
 };
