@@ -55,12 +55,9 @@ export default {
         }, 500);
         },
          onClickLeft() {
-            // Toast('返回');
-            // alert("返回")
-             this.$router.push('cart');
+             this.$router.go(-1);
         },
         onClickRight() {
-            //  Toast('按钮');
              this.$router.push('select');
         }
     }

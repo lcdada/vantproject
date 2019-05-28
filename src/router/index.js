@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Home from '@/pages/Home'
 import HelloWorld from '@/pages/HelloWorld'
 import Cart from '@/pages/Cart'
-import  List  from '@/pages/List';
+import  List  from '@/pages/List'
 import Select from '@/pages/Select'
 
 Vue.use(Router)
@@ -11,6 +12,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/helloWorld',
       name: 'HelloWorld',
       component: HelloWorld
     },
