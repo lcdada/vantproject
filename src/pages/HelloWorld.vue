@@ -1,5 +1,13 @@
 <template>
   <div class="goods">
+    <van-nav-bar
+      title="标题"
+      left-text="返回"
+      right-text="按钮"
+      left-arrow
+      @click-left="onClickLeft"
+      @click-right="onClickRight"
+      />
     <van-swipe class="goods-swipe" :autoplay="3000">
       <van-swipe-item v-for="thumb in goods.thumb" :key="thumb">
         <img :src="thumb" >
@@ -60,7 +68,8 @@ import {
   SwipeItem,
   GoodsAction,
   GoodsActionBigBtn,
-  GoodsActionMiniBtn
+  GoodsActionMiniBtn,
+  NavBar
 } from 'vant';
 export default {
   components: {
@@ -73,7 +82,8 @@ export default {
     [SwipeItem.name]: SwipeItem,
     [GoodsAction.name]: GoodsAction,
     [GoodsActionBigBtn.name]: GoodsActionBigBtn,
-    [GoodsActionMiniBtn.name]: GoodsActionMiniBtn
+    [GoodsActionMiniBtn.name]: GoodsActionMiniBtn,
+    [NavBar.name]:NavBar
   },
   data() {
     return {
@@ -99,7 +109,10 @@ export default {
     },
     sorry() {
       Toast('暂无后续逻辑~');
-    }
+    },
+    onClickLeft() {
+        this.$router.go(-1);
+    },
   }
 };
 </script>

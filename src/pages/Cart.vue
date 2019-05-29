@@ -41,7 +41,9 @@ export default {
     [Card.name]: Card,
     [Checkbox.name]: Checkbox,
     [SubmitBar.name]: SubmitBar,
-    [CheckboxGroup.name]: CheckboxGroup
+    [CheckboxGroup.name]: CheckboxGroup,
+    [NavBar.name]:NavBar,
+    [Toast.name]:Toast
   },
   data() {
     return {
