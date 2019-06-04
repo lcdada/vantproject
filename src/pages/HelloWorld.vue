@@ -6,7 +6,6 @@
       right-text="按钮"
       left-arrow
       @click-left="onClickLeft"
-      @click-right="onClickRight"
       />
     <van-swipe class="goods-swipe" :autoplay="3000">
       <van-swipe-item v-for="thumb in goods.thumb" :key="thumb">

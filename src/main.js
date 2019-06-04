@@ -8,7 +8,14 @@ import store from './store'
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
 
-
+Vue.prototype.$http = axios
+Vue.prototype.getConfig = function () {
+  this.$http.get('./static/config.json').then(res => {
+    Vue.prototype.apiUrl = res.data.apiUrl
+  }).catch(err => {
+    console.log(err)
+  })
+}
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(Vuex)

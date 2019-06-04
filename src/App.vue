@@ -6,7 +6,11 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  //调用getConfig()获取ApiUrl
+  mounted() {
+    this.getConfig();
+  }
 }
 </script>
 
